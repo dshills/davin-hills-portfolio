@@ -1,5 +1,6 @@
 import React, { useState, useEffect, useRef } from 'react';
 import articles from './data/articles.json';
+import openSourceProjects from './data/repos.json';
 
 const Portfolio = () => {
   const [scrollY, setScrollY] = useState(0);
@@ -27,15 +28,6 @@ const Portfolio = () => {
       element.scrollIntoView({ behavior: 'smooth' });
     }
   };
-
-  const openSourceProjects = [
-    { name: 'specBuilder', description: 'AI-assisted specification builder that converts product ideas into formal, machine-usable specs for coding agents', stars: '★', lang: 'Go', url: 'https://github.com/dshills/specBuilder', featured: true },
-    { name: 'langgraph-go', description: 'Go-native orchestration framework for building stateful, graph-based LLM and tool workflows with deterministic replay', stars: '2', lang: 'Go', url: 'https://github.com/dshills/langgraph-go', featured: true },
-    { name: 'mcp-pr', description: 'MCP server for AI-powered code reviews using Anthropic Claude, OpenAI GPT, or Google Gemini', stars: '1', lang: 'Go', url: 'https://github.com/dshills/mcp-pr', featured: true },
-    { name: 'wiggle', description: 'Multi-node LLM processing framework for building complex AI pipelines and RAG systems', stars: '21', lang: 'Go', url: 'https://github.com/dshills/wiggle' },
-    { name: 'golevel7', description: 'Production HL7 decoder/encoder used in healthcare integrations worldwide', stars: '33', lang: 'Go', url: 'https://github.com/dshills/golevel7' },
-    { name: 'termai', description: 'Terminal AI client that integrates with OpenAI, Anthropic, Google, and more from the command line', stars: '14', lang: 'Go', url: 'https://github.com/dshills/termai' },
-  ];
 
   const experience = [
     { role: 'Chief Technology Officer', company: 'Alopex', period: '2024 — Present', focus: 'Healthcare IT' },

@@ -6,7 +6,9 @@
   "scripts": {
     "dev": "vite",
     "fetch-articles": "node scripts/fetch-articles.mjs",
-    "build": "npm run fetch-articles && vite build",
+    "fetch-repos": "node scripts/fetch-repos.mjs",
+    "fetch-data": "npm run fetch-articles && npm run fetch-repos",
+    "build": "npm run fetch-data && vite build",
     "preview": "vite preview"
   },
   "dependencies": {

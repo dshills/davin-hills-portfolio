@@ -6,9 +6,11 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 
 ```bash
 npm run dev            # Start Vite dev server with hot reload
-npm run build          # Fetch articles from Medium + production build
+npm run build          # Fetch data from Medium/GitHub + production build
 npm run preview        # Preview production build locally
+npm run fetch-data     # Manually refresh all external data
 npm run fetch-articles # Manually refresh articles from Medium RSS
+npm run fetch-repos    # Manually refresh repos from GitHub API
 ```
 
 No test or lint commands are configured.
@@ -32,7 +34,7 @@ This is a React 18 + Vite 5 portfolio website with a **single-component architec
 
 ### Content Data Locations
 
-- `openSourceProjects` - Hardcoded in Portfolio.jsx, edit to update GitHub project cards
+- `openSourceProjects` - **Dynamic**: Fetched from GitHub API at build time via `scripts/fetch-repos.mjs`, stored in `src/data/repos.json`. Configure featured repos and exclusions in the script.
 - `articles` - **Dynamic**: Fetched from Medium RSS at build time via `scripts/fetch-articles.mjs`, stored in `src/data/articles.json`
 - `experience` - Hardcoded in Portfolio.jsx, edit to update career history
 

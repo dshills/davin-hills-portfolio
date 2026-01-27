@@ -1,0 +1,47 @@
+[
+  {
+    "name": "specBuilder",
+    "description": "AI assisted specification builder for use with coding agents",
+    "stars": "2",
+    "lang": "Go",
+    "url": "https://github.com/dshills/specBuilder",
+    "featured": true
+  },
+  {
+    "name": "langgraph-go",
+    "description": "A Go implementation of the langgraph project: https://github.com/langchain-ai/langgraph",
+    "stars": "6",
+    "lang": "Go",
+    "url": "https://github.com/dshills/langgraph-go",
+    "featured": true
+  },
+  {
+    "name": "mcp-pr",
+    "description": "MCP server for doing code reviews",
+    "stars": "3",
+    "lang": "Go",
+    "url": "https://github.com/dshills/mcp-pr",
+    "featured": true
+  },
+  {
+    "name": "visDB",
+    "description": "Database visualization tool that connects to PostgreSQL, MySQL, SQLite, SQL Server, and MongoDB to generate interactive ERD diagrams. Features   automatic schema introspection, multiple layout algorithms, drag-and-drop positioning, minimap navigation, light/dark themes, undo/redo history, and    export to SVG/PNG/PDF. Includes CLI for headless use.",
+    "stars": "0",
+    "lang": "Go",
+    "url": "https://github.com/dshills/visDB"
+  },
+  {
+    "name": "golevel7v2",
+    "description": "Go library for parsing, encoding, and manipulating HL7 v2.x healthcare messages. Features streaming parser with MLLP support, struct marshaling/unmarshaling via tags, rule-based validation, ACK/NAK generation, and network client/server for HL7 transport.",
+    "stars": "1",
+    "lang": "Go",
+    "url": "https://github.com/dshills/golevel7v2"
+  },
+  {
+    "name": "keystorm",
+    "description": "KeyStorm is a programming editor in the spirit of vim written in Go",
+    "stars": "0",
+    "lang": "Go",
+    "url": "https://github.com/dshills/keystorm"
+  }
+]
