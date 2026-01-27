@@ -1,4 +1,5 @@
 import React, { useState, useEffect, useRef } from 'react';
+import articles from './data/articles.json';
 
 const Portfolio = () => {
   const [scrollY, setScrollY] = useState(0);
@@ -34,14 +35,6 @@ const Portfolio = () => {
     { name: 'wiggle', description: 'Multi-node LLM processing framework for building complex AI pipelines and RAG systems', stars: '21', lang: 'Go', url: 'https://github.com/dshills/wiggle' },
     { name: 'golevel7', description: 'Production HL7 decoder/encoder used in healthcare integrations worldwide', stars: '33', lang: 'Go', url: 'https://github.com/dshills/golevel7' },
     { name: 'termai', description: 'Terminal AI client that integrates with OpenAI, Anthropic, Google, and more from the command line', stars: '14', lang: 'Go', url: 'https://github.com/dshills/termai' },
-  ];
-
-  const articles = [
-    { title: 'Building an MCP Code Review Server in Go Using Official SDKs', date: 'Oct 2025', tag: 'MCP', url: 'https://dshills.medium.com/building-an-mcp-code-review-server-in-go-using-official-sdks-011a6f63abc1' },
-    { title: 'How I Built a High-Performance Vector Database in Go Without Writing Code', date: 'Jun 2025', tag: 'AI Dev', url: 'https://dshills.medium.com/how-i-built-a-high-performance-vector-database-in-go-without-writing-code-03c35d174fc8' },
-    { title: 'Programming Without People: Designing a Language for LLMs', date: 'Jun 2025', tag: 'Language', url: 'https://dshills.medium.com/programming-without-people-designing-a-language-for-llms-2192618d2540' },
-    { title: 'Building an MCP Server from Scratch', date: 'Apr 2025', tag: 'MCP', url: 'https://dshills.medium.com/building-an-mcp-server-from-scratch-432f700b5e68' },
-    { title: 'Introducing Wiggle: Multi-Node Framework for LLM Workflows', date: 'Oct 2024', tag: 'Framework', url: 'https://dshills.medium.com/introducing-wiggle-the-modular-multi-node-framework-for-large-language-model-workflows-e169bcbae233' },
   ];
 
   const experience = [
