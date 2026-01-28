@@ -415,10 +415,10 @@ const Portfolio = () => {
 
         .article-item {
           display: grid;
-          grid-template-columns: 1fr auto auto;
-          gap: 4rem;
+          grid-template-columns: 120px 1fr auto auto;
+          gap: 2rem;
           align-items: center;
-          padding: 2.5rem 0;
+          padding: 2rem 0;
           border-bottom: 1px solid var(--border);
           transition: all 0.3s ease;
           cursor: none;
@@ -427,12 +427,39 @@ const Portfolio = () => {
         }
 
         .article-item:hover {
-          padding-left: 2rem;
+          padding-left: 1rem;
           border-color: var(--accent);
         }
 
         .article-item:hover .article-title {
           color: var(--accent);
+        }
+
+        .article-thumbnail {
+          width: 120px;
+          height: 80px;
+          object-fit: cover;
+          border-radius: 4px;
+          background: var(--bg-tertiary);
+          border: 1px solid var(--border);
+          transition: border-color 0.3s ease;
+        }
+
+        .article-item:hover .article-thumbnail {
+          border-color: var(--accent);
+        }
+
+        .article-thumbnail-placeholder {
+          width: 120px;
+          height: 80px;
+          background: var(--bg-tertiary);
+          border: 1px solid var(--border);
+          border-radius: 4px;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          color: var(--text-muted);
+          font-size: 1.5rem;
         }
 
         .article-content {
@@ -596,11 +623,18 @@ const Portfolio = () => {
           .projects-grid {
             grid-template-columns: 1fr;
           }
-          
+
           .article-item {
-            grid-template-columns: 1fr auto;
+            grid-template-columns: 100px 1fr auto;
+            gap: 1.5rem;
           }
-          
+
+          .article-thumbnail,
+          .article-thumbnail-placeholder {
+            width: 100px;
+            height: 66px;
+          }
+
           .article-arrow {
             display: none;
           }
@@ -636,6 +670,21 @@ const Portfolio = () => {
           .footer {
             padding-left: 2rem;
             padding-right: 2rem;
+          }
+
+          .article-item {
+            grid-template-columns: 80px 1fr;
+            gap: 1rem;
+          }
+
+          .article-thumbnail,
+          .article-thumbnail-placeholder {
+            width: 80px;
+            height: 53px;
+          }
+
+          .article-meta {
+            display: none;
           }
 
           .custom-cursor,
@@ -740,6 +789,11 @@ const Portfolio = () => {
         <div className="articles-list">
           {articles.map((article, i) => (
             <a href={article.url} target="_blank" rel="noopener noreferrer" className="article-item" key={i}>
+              {article.thumbnail ? (
+                <img src={article.thumbnail} alt="" className="article-thumbnail" />
+              ) : (
+                <div className="article-thumbnail-placeholder">✎</div>
+              )}
               <div className="article-content">
                 <span className="article-tag">{article.tag}</span>
                 <h3 className="article-title">{article.title}</h3>

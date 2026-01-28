@@ -29,6 +29,8 @@ function parseRSS(xml) {
     const title = extractTag(item, 'title');
     const link = extractTag(item, 'link');
     const pubDate = extractTag(item, 'pubDate');
+    const contentEncoded = extractTag(item, 'content:encoded');
+    const thumbnail = extractFirstImage(contentEncoded);
     const categories = item.match(/<category><!\[CDATA\[(.*?)\]\]><\/category>/g) || [];
 
     const rawTag = categories.length > 0
@@ -55,7 +57,7 @@ function parseRSS(xml) {
     // Clean URL by removing tracking parameters
     const cleanUrl = link.split('?')[0];
 
-    return { title, date: formattedDate, tag, url: cleanUrl };
+    return { title, date: formattedDate, tag, url: cleanUrl, thumbnail };
   });
 }
 
@@ -67,6 +69,12 @@ function extractTag(xml, tag) {
   // Fall back to plain text
   const match = xml.match(new RegExp(`<${tag}>([\\s\\S]*?)</${tag}>`));
   return match ? match[1].trim() : '';
+}
+
+function extractFirstImage(html) {
+  if (!html) return null;
+  const imgMatch = html.match(/<img[^>]+src=["']([^"']+)["']/);
+  return imgMatch ? imgMatch[1] : null;
 }
 
 fetchArticles().catch(err => {

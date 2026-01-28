@@ -3,60 +3,70 @@
     "title": "Stop Prompting. Start Specifying.",
     "date": "Jan 2026",
     "tag": "Developer Tools",
-    "url": "https://dshills.medium.com/stop-prompting-start-specifying-ff5a6f856797"
+    "url": "https://dshills.medium.com/stop-prompting-start-specifying-ff5a6f856797",
+    "thumbnail": "https://cdn-images-1.medium.com/max/1024/1*Ab8zRJlc0eQfS_LzfvUgiA.png"
   },
   {
     "title": "Summoning KeyStorm: An Editor Born From Model-to-Model Collaboration",
     "date": "Dec 2025",
     "tag": "Editor",
-    "url": "https://dshills.medium.com/summoning-keystorm-an-editor-born-from-model-to-model-collaboration-56ede260c4c4"
+    "url": "https://dshills.medium.com/summoning-keystorm-an-editor-born-from-model-to-model-collaboration-56ede260c4c4",
+    "thumbnail": "https://cdn-images-1.medium.com/max/1024/1*7y-iKDAjMxgX89cTIx3FZQ.png"
   },
   {
     "title": "Building Impossible Projects with AI",
     "date": "Oct 2025",
     "tag": "Claude",
-    "url": "https://dshills.medium.com/building-impossible-projects-with-ai-82baa588e8ed"
+    "url": "https://dshills.medium.com/building-impossible-projects-with-ai-82baa588e8ed",
+    "thumbnail": "https://cdn-images-1.medium.com/max/1024/1*cSfqzH7mChQxFDZY1vZAig.png"
   },
   {
     "title": "Building an MCP Code Review Server in Go Using Official SDKs",
     "date": "Oct 2025",
     "tag": "MCP Server",
-    "url": "https://dshills.medium.com/building-an-mcp-code-review-server-in-go-using-official-sdks-011a6f63abc1"
+    "url": "https://dshills.medium.com/building-an-mcp-code-review-server-in-go-using-official-sdks-011a6f63abc1",
+    "thumbnail": "https://cdn-images-1.medium.com/max/1024/1*JrKEUyntAyH8RzQs7AMPaw.png"
   },
   {
     "title": "Effective Go Development with Claude: Best Practices for AI Pair Programming",
     "date": "Jul 2025",
     "tag": "Claude",
-    "url": "https://dshills.medium.com/effective-go-development-with-claude-best-practices-for-ai-pair-programming-83fba0247a4f"
+    "url": "https://dshills.medium.com/effective-go-development-with-claude-best-practices-for-ai-pair-programming-83fba0247a4f",
+    "thumbnail": "https://cdn-images-1.medium.com/max/1024/1*cDMm8GH1J-NQ68n3beYzQA.png"
   },
   {
     "title": "How I Built a High-Performance Vector Database in Go Without Writing Code",
     "date": "Jun 2025",
     "tag": "Claude",
-    "url": "https://dshills.medium.com/how-i-built-a-high-performance-vector-database-in-go-without-writing-code-03c35d174fc8"
+    "url": "https://dshills.medium.com/how-i-built-a-high-performance-vector-database-in-go-without-writing-code-03c35d174fc8",
+    "thumbnail": "https://cdn-images-1.medium.com/max/1024/1*eeAM-VV5Wx_wxIOwSJbjnw.png"
   },
   {
     "title": "Programming Without People: Designing a Language for LLMs",
     "date": "Jun 2025",
     "tag": "LLM",
-    "url": "https://dshills.medium.com/programming-without-people-designing-a-language-for-llms-2192618d2540"
+    "url": "https://dshills.medium.com/programming-without-people-designing-a-language-for-llms-2192618d2540",
+    "thumbnail": "https://cdn-images-1.medium.com/max/1024/1*aVc1nfyed7Xr0rhtshy5Kg.png"
   },
   {
     "title": "Building an MCP Server from Scratch",
     "date": "Apr 2025",
     "tag": "Go",
-    "url": "https://dshills.medium.com/building-an-mcp-server-from-scratch-432f700b5e68"
+    "url": "https://dshills.medium.com/building-an-mcp-server-from-scratch-432f700b5e68",
+    "thumbnail": "https://cdn-images-1.medium.com/max/1024/1*nNz-h-6YQSFZyauPGF5K6Q.png"
   },
   {
     "title": "Which AI is Best at Following Directions?",
     "date": "Oct 2024",
     "tag": "Article",
-    "url": "https://dshills.medium.com/which-ai-is-best-at-following-directions-167134b620e0"
+    "url": "https://dshills.medium.com/which-ai-is-best-at-following-directions-167134b620e0",
+    "thumbnail": "https://cdn-images-1.medium.com/max/1024/1*-VoBEHNVy4v961oJTtDeZA.png"
   },
   {
     "title": "Introducing Wiggle: The Modular, Multi-Node Framework for Large Language Model Workflows",
     "date": "Oct 2024",
     "tag": "OpenAI",
-    "url": "https://dshills.medium.com/introducing-wiggle-the-modular-multi-node-framework-for-large-language-model-workflows-e169bcbae233"
+    "url": "https://dshills.medium.com/introducing-wiggle-the-modular-multi-node-framework-for-large-language-model-workflows-e169bcbae233",
+    "thumbnail": "https://cdn-images-1.medium.com/max/1024/1*Ez_i63sOhhhIB1JizGPh4A.png"
   }
 ]
