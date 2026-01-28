@@ -30,13 +30,13 @@ const Portfolio = () => {
   };
 
   const experience = [
-    { role: 'Chief Technology Officer', company: 'Alopex', period: '2024 — Present', focus: 'Healthcare IT' },
-    { role: 'Senior Engineer', company: 'Experient', period: '2023 — 2024', focus: 'Business Integrations' },
-    { role: 'Technical Director', company: 'ConnectRN', period: '2021 — 2023', focus: 'Healthcare IT' },
-    { role: 'Fractional CTO', company: 'Hills Consulting LLC', period: '2015 — 2021', focus: 'Healthcare Tech' },
-    { role: 'Chief Technology Officer', company: 'BettrLife Inc', period: '2010 — 2015', focus: 'Mobile Health' },
-    { role: 'VP Operations', company: 'Eclipsys Corporation', period: 'Earlier', focus: 'Practice Solutions' },
-    { role: 'SVP Operations → Chief Architect', company: 'MediNotes Corporation', period: 'Earlier', focus: 'Healthcare IT' },
+    { role: 'Chief Technology Officer', company: 'Alopex', domain: 'alopexcare.com', period: '2024 — Present', focus: 'Healthcare IT' },
+    { role: 'Senior Engineer', company: 'Experient', domain: 'experientgroup.com', period: '2023 — 2024', focus: 'Business Integrations' },
+    { role: 'Technical Director', company: 'ConnectRN', domain: 'connectrn.com', period: '2021 — 2023', focus: 'Healthcare IT' },
+    { role: 'Fractional CTO', company: 'Hills Consulting LLC', domain: 'hillsconsulting.com', period: '2015 — 2021', focus: 'Healthcare Tech' },
+    { role: 'Chief Technology Officer', company: 'BettrLife Inc', domain: 'bettrlife.com', period: '2010 — 2015', focus: 'Mobile Health' },
+    { role: 'VP Operations', company: 'Eclipsys Corporation', domain: 'eclipsys.com', period: 'Earlier', focus: 'Practice Solutions' },
+    { role: 'SVP Operations → Chief Architect', company: 'MediNotes Corporation', domain: 'medinotes.com', period: 'Earlier', focus: 'Healthcare IT' },
   ];
 
   return (
@@ -561,6 +561,22 @@ const Portfolio = () => {
           color: var(--text-muted);
         }
 
+        .experience-main {
+          display: flex;
+          align-items: center;
+          gap: 1.5rem;
+        }
+
+        .experience-logo {
+          width: 48px;
+          height: 48px;
+          object-fit: contain;
+          border-radius: 8px;
+          background: #fff;
+          padding: 6px;
+          flex-shrink: 0;
+        }
+
         .experience-content h3 {
           font-family: 'Playfair Display', serif;
           font-size: 2rem;
@@ -656,6 +672,11 @@ const Portfolio = () => {
           .experience-item {
             grid-template-columns: 1fr;
             gap: 1rem;
+          }
+
+          .experience-logo {
+            width: 40px;
+            height: 40px;
           }
 
           .experience-focus {
@@ -834,9 +855,17 @@ const Portfolio = () => {
           {experience.map((exp, i) => (
             <div className="experience-item" key={i}>
               <span className="experience-period">{exp.period}</span>
-              <div className="experience-content">
-                <h3>{exp.role}</h3>
-                <span className="company">{exp.company}</span>
+              <div className="experience-main">
+                <img
+                  src={`https://www.google.com/s2/favicons?domain=${exp.domain}&sz=128`}
+                  alt={`${exp.company} logo`}
+                  className="experience-logo"
+                  onError={(e) => { e.target.style.display = 'none'; }}
+                />
+                <div className="experience-content">
+                  <h3>{exp.role}</h3>
+                  <span className="company">{exp.company}</span>
+                </div>
               </div>
               <span className="experience-focus">{exp.focus}</span>
             </div>
