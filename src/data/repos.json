@@ -2,9 +2,10 @@
   {
     "name": "specBuilder",
     "description": "AI assisted specification builder for use with coding agents",
-    "stars": "2",
+    "stars": "3",
     "lang": "Go",
     "url": "https://github.com/dshills/specBuilder",
+    "thumbnail": "https://raw.githubusercontent.com/dshills/specBuilder/main/docs/images/specbuilder-advanced.png",
     "featured": true
   },
   {
@@ -26,9 +27,10 @@
   {
     "name": "visDB",
     "description": "Database visualization tool that connects to PostgreSQL, MySQL, SQLite, SQL Server, and MongoDB to generate interactive ERD diagrams. Features   automatic schema introspection, multiple layout algorithms, drag-and-drop positioning, minimap navigation, light/dark themes, undo/redo history, and    export to SVG/PNG/PDF. Includes CLI for headless use.",
-    "stars": "0",
+    "stars": "1",
     "lang": "Go",
-    "url": "https://github.com/dshills/visDB"
+    "url": "https://github.com/dshills/visDB",
+    "thumbnail": "https://raw.githubusercontent.com/dshills/visDB/main/examples/light.png"
   },
   {
     "name": "golevel7v2",

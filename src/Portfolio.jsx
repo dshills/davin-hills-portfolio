@@ -405,6 +405,20 @@ const Portfolio = () => {
           font-size: 0.95rem;
         }
 
+        .project-thumbnail {
+          width: 100%;
+          height: 140px;
+          object-fit: cover;
+          border-radius: 4px;
+          margin-bottom: 1.5rem;
+          border: 1px solid var(--border);
+          transition: border-color 0.3s ease;
+        }
+
+        .project-card:hover .project-thumbnail {
+          border-color: var(--accent);
+        }
+
         .articles-section {
           background: var(--bg-primary);
         }
@@ -773,6 +787,9 @@ const Portfolio = () => {
                 </div>
                 <span className="project-stars">★ {project.stars}</span>
               </div>
+              {project.thumbnail && (
+                <img src={project.thumbnail} alt="" className="project-thumbnail" />
+              )}
               <h3 className="project-name">{project.name}</h3>
               <p className="project-desc">{project.description}</p>
             </a>
