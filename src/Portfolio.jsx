@@ -2,10 +2,75 @@ import React, { useState, useEffect, useRef } from 'react';
 import articles from './data/articles.json';
 import openSourceProjects from './data/repos.json';
 
+const themes = {
+  dark: {
+    name: 'Dark',
+    bgPrimary: '#0a0a0b',
+    bgSecondary: '#111113',
+    bgTertiary: '#18181b',
+    accent: '#d4a853',
+    accentGlow: '#f5c96320',
+    textPrimary: '#fafafa',
+    textSecondary: '#a1a1aa',
+    textMuted: '#52525b',
+    border: '#27272a',
+  },
+  light: {
+    name: 'Light',
+    bgPrimary: '#fafafa',
+    bgSecondary: '#f4f4f5',
+    bgTertiary: '#e4e4e7',
+    accent: '#b8860b',
+    accentGlow: '#b8860b20',
+    textPrimary: '#18181b',
+    textSecondary: '#52525b',
+    textMuted: '#a1a1aa',
+    border: '#d4d4d8',
+  },
+  forest: {
+    name: 'Forest',
+    bgPrimary: '#0a0f0a',
+    bgSecondary: '#0f1a0f',
+    bgTertiary: '#1a2a1a',
+    accent: '#7cb342',
+    accentGlow: '#7cb34220',
+    textPrimary: '#e8f5e9',
+    textSecondary: '#a5d6a7',
+    textMuted: '#4a6a4a',
+    border: '#2e4a2e',
+  },
+  warm: {
+    name: 'Warm',
+    bgPrimary: '#0f0a0a',
+    bgSecondary: '#1a0f0f',
+    bgTertiary: '#2a1a1a',
+    accent: '#e57373',
+    accentGlow: '#e5737320',
+    textPrimary: '#fce4ec',
+    textSecondary: '#f8bbd9',
+    textMuted: '#6a4a4a',
+    border: '#4a2e2e',
+  },
+  tokyonight: {
+    name: 'Tokyo Night',
+    bgPrimary: '#1a1b26',
+    bgSecondary: '#16161e',
+    bgTertiary: '#292e42',
+    accent: '#7aa2f7',
+    accentGlow: '#7aa2f720',
+    textPrimary: '#c0caf5',
+    textSecondary: '#a9b1d6',
+    textMuted: '#565f89',
+    border: '#292e42',
+  },
+};
+
 const Portfolio = () => {
   const [scrollY, setScrollY] = useState(0);
   const [mousePos, setMousePos] = useState({ x: 0, y: 0 });
   const [activeSection, setActiveSection] = useState('hero');
+  const [theme, setTheme] = useState('tokyonight');
+  const currentTheme = themes[theme];
   const heroRef = useRef(null);
   const opensourceRef = useRef(null);
   const articlesRef = useRef(null);
@@ -55,15 +120,15 @@ const Portfolio = () => {
         }
 
         :root {
-          --bg-primary: #0a0a0b;
-          --bg-secondary: #111113;
-          --bg-tertiary: #18181b;
-          --accent: #d4a853;
-          --accent-glow: #f5c96320;
-          --text-primary: #fafafa;
-          --text-secondary: #a1a1aa;
-          --text-muted: #52525b;
-          --border: #27272a;
+          --bg-primary: ${currentTheme.bgPrimary};
+          --bg-secondary: ${currentTheme.bgSecondary};
+          --bg-tertiary: ${currentTheme.bgTertiary};
+          --accent: ${currentTheme.accent};
+          --accent-glow: ${currentTheme.accentGlow};
+          --text-primary: ${currentTheme.textPrimary};
+          --text-secondary: ${currentTheme.textSecondary};
+          --text-muted: ${currentTheme.textMuted};
+          --border: ${currentTheme.border};
         }
 
         .portfolio-root {
@@ -131,6 +196,7 @@ const Portfolio = () => {
           align-items: center;
           z-index: 100;
           mix-blend-mode: difference;
+          gap: 2rem;
         }
 
         .nav-logo {
@@ -143,6 +209,8 @@ const Portfolio = () => {
         .nav-links {
           display: flex;
           gap: 3rem;
+          flex: 1;
+          justify-content: flex-end;
         }
 
         .nav-link {
@@ -161,6 +229,33 @@ const Portfolio = () => {
         }
 
         .nav-link:hover {
+          color: var(--text-primary);
+        }
+
+        .theme-select {
+          font-family: 'JetBrains Mono', monospace;
+          font-size: 0.75rem;
+          background: var(--bg-tertiary);
+          color: var(--text-secondary);
+          border: 1px solid var(--border);
+          padding: 0.5rem 1rem;
+          cursor: pointer;
+          text-transform: uppercase;
+          letter-spacing: 0.1em;
+        }
+
+        .theme-select:hover {
+          border-color: var(--accent);
+          color: var(--text-primary);
+        }
+
+        .theme-select:focus {
+          outline: none;
+          border-color: var(--accent);
+        }
+
+        .theme-select option {
+          background: var(--bg-tertiary);
           color: var(--text-primary);
         }
 
@@ -771,6 +866,15 @@ const Portfolio = () => {
           <button onClick={() => scrollToSection('experience')} className="nav-link">Experience</button>
           <button onClick={() => scrollToSection('contact')} className="nav-link">Contact</button>
         </div>
+        <select
+          value={theme}
+          onChange={(e) => setTheme(e.target.value)}
+          className="theme-select"
+        >
+          {Object.entries(themes).map(([key, t]) => (
+            <option key={key} value={key}>{t.name}</option>
+          ))}
+        </select>
       </nav>
 
       <section className="hero" ref={heroRef}>
