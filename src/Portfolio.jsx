@@ -32,7 +32,7 @@ const Portfolio = () => {
   const experience = [
     { role: 'Chief Technology Officer', company: 'Alopex', domain: 'alopexcare.com', period: '2024 — Present', focus: 'Healthcare IT' },
     { role: 'Senior Engineer', company: 'Experient', domain: 'experientgroup.com', period: '2023 — 2024', focus: 'Business Integrations' },
-    { role: 'Technical Director', company: 'ConnectRN', domain: 'connectrn.com', period: '2021 — 2023', focus: 'Healthcare IT' },
+    { role: 'Principal Engineer -> Director Enterprise Architecture', company: 'ConnectRN', domain: 'connectrn.com', period: '2021 — 2023', focus: 'Healthcare IT' },
     { role: 'Fractional CTO', company: 'Hills Consulting LLC', domain: 'hillsconsulting.com', period: '2015 — 2021', focus: 'Healthcare Tech' },
     { role: 'Chief Technology Officer', company: 'BettrLife Inc', domain: 'bettrlife.com', period: '2010 — 2015', focus: 'Mobile Health' },
     { role: 'VP Operations', company: 'Eclipsys Corporation', domain: 'eclipsys.com', period: 'Earlier', focus: 'Practice Solutions' },
@@ -775,7 +775,7 @@ const Portfolio = () => {
 
       <section className="hero" ref={heroRef}>
         <div className="hero-content">
-          <p className="hero-eyebrow">Building AI Infrastructure in Go</p>
+          <p className="hero-eyebrow">Building Intelligent Systems at Scale</p>
           <h1 className="hero-title">
             <span>Davin</span>
             <span><span className="accent">Hills</span></span>
@@ -783,7 +783,7 @@ const Portfolio = () => {
           <p className="hero-subtitle">
             30+ years shipping software—from Chief Architect to CTO to Technical Director. 
             Currently building AI infrastructure and LLM tooling in Go. 
-            Drake University, ComputerWorld Visionary Award winner.
+            Drake University, Computerworld Visionary Award winner.
           </p>
         </div>
         <div className="hero-scroll-indicator">
