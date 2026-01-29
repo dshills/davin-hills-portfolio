@@ -95,7 +95,7 @@ const Portfolio = () => {
   };
 
   const experience = [
-    { role: 'Architect / Engineer / Fractional CTO', company: 'Hills Consulting', domain: 'hillsconsulting.com', period: '2026 — Present', focus: 'Healthcare Tech' },
+    { role: 'Architect / Engineer / Fractional CTO', company: 'Hills Consulting', domain: 'hillsconsulting.com', period: '2026 — Present', focus: 'Consulting' },
     { role: 'Chief Technology Officer', company: 'Alopex', domain: 'alopexcare.com', period: '2024 — 2026', focus: 'Healthcare IT' },
     { role: 'Senior Engineer', company: 'Experient', domain: 'experientgroup.com', period: '2023 — 2024', focus: 'Business Integrations' },
     { role: 'Principal Engineer -> Director Enterprise Architecture', company: 'ConnectRN', domain: 'connectrn.com', period: '2021 — 2023', focus: 'Healthcare IT' },
